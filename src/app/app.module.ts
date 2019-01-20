@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GifSeachManualComponent } from './giphy/giphy-search-manual/giphy-search-manual.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GifSeachManualComponent
   ],
   imports: [
     BrowserModule,
