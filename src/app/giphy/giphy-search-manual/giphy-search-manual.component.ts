@@ -7,6 +7,8 @@ import { GiphySearchService } from '../giphy-search.service';
 })
 
 export class GiphySearchManualComponent implements OnInit {
+
+  gifs: Object = new Object();
   constructor(private giphySearchService: GiphySearchService) {
    }
 
@@ -14,6 +16,9 @@ export class GiphySearchManualComponent implements OnInit {
   }
 
   pesquisarGiphy() {
-    this.giphySearchService.pesquisarGiphy('', '');
+    this.giphySearchService.pesquisarGiphy('2', 'happy')
+      .subscribe((response: Object) => {
+        this.gifs = response;
+      });
   }
 }

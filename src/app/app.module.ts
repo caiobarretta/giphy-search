@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,9 @@ import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-searc
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GiphySearchManualModule
+    GiphySearchManualModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
