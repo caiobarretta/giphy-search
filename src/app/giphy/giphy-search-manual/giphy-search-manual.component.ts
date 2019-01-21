@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GiphySearchService } from '../giphy-search.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'giphy-search-manual',
@@ -12,10 +13,11 @@ export class GiphySearchManualComponent implements OnInit {
   limit: string;
   term: string;
 
-  constructor(private giphySearchService: GiphySearchService) {
+  constructor(private title: Title, private giphySearchService: GiphySearchService) {
    }
 
   ngOnInit() {
+    this.title.setTitle('GiphySearch by Caio');
   }
 
   pesquisarGiphy() {

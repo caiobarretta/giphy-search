@@ -5,7 +5,4 @@ Term: <input type="text" [(ngModel)]='term' (keyup.enter)="pesquisarGiphy()" >
 <br>
 
 <!-- {{gifs | json}} -->
-
-<a *ngFor="let gif of gifs">
-  <img src="http://i.ghipy.com/{{gif.id}}.gif" title="imagem {{gif.id}}">
-</a>
+<giphy-search-list [gifsList]="gifs"></giphy-search-list>
