@@ -1,6 +1,6 @@
 
-Limit : <input type="number">
-Term: <input type="text" (keyup.enter)="pesquisarGiphy()" >
+Limit : <input type="number" [(ngModel)]='limit' >
+Term: <input type="text" [(ngModel)]='term' (keyup.enter)="pesquisarGiphy()" >
 <input type="button" value="pesquisar" (click)="pesquisarGiphy()">
 <br>
 
