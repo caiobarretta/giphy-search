@@ -4,9 +4,7 @@ import { GiphySearchListComponent } from './giphy-search-list.component';
 
 @NgModule({
   declarations: [ GiphySearchListComponent ],
-  imports: [
-    ShareModule
-  ],
+  imports: [ ShareModule ],
   exports: [ GiphySearchListComponent ]
 })
 export class GiphySearchListModule { }
