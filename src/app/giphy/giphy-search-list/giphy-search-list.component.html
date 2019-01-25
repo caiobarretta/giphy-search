@@ -1,4 +1,4 @@
 
-<a *ngFor="let data of gifsList.data">
+<a *ngFor="let data of gifsList?.data">
   <img [src]="data?.images?.original?.url" title="imagem {{data.id}}">
 </a>

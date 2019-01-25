@@ -1,9 +1,14 @@
 <form #f="ngForm" (ngSubmit)="enviarContato(f)" #refForm="ngForm">
   <label>
     <span>Seu nome Completo</span>
-    <input id="nome" type="text" name="nomeCompleto" placeholder="seu nome" ngModel
+    <input #nomeCompleto="ngModel" id="nomeCompleto" type="text" name="nomeCompleto" placeholder="seu nome" ngModel
       minlength="2" required>
   </label>
+
+  <div *ngIf="f.status != 'VALID' && nomeCompleto.touched"
+    class="erros">
+    O nome é obrigatório!
+  </div>
 
   <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
     <span>Email</span>
